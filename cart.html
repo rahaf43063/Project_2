@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="متجر إيليجانسيا - أحدث صيحات الموضة وتشكيلات فريدة" />
+    <meta property="og:title" content="Store Eleganceia" />
+    <meta property="og:image" content="images/og-image.png" />
+    <!-- Title & Favicon -->
+    <title>Store Eleganceia | Cart</title>
+    <link rel="icon" href="images/logo.png" />
+    <!-- CSS Files -->
+    <script src="js/theme-init.js"></script>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- ========== HEADER ========== -->
+    <header>
+        <!-- Top Header -->
+        <div class="top-header d-flex align-items-center py-2">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- Logo -->
+                    <div class="col-6 col-md-4">
+                        <a href="index.html">
+                            <img class="site-logo" src="images/logo.png" alt="شعار إيليجانسيا" loading="lazy">
+                        </a>
+                    </div>
+
+                    <!-- Search -->
+                    <div class="col-6 col-md-4 d-flex justify-content-center">
+                        <form class="d-flex search-form w-100" role="search">
+                            <input class="form-control search-input" type="search" placeholder="ابحثِ هنا...؟"
+                                aria-label="Search" />
+                            <button class="btn search-button" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- User & Services (Desktop) -->
+                    <div class="col-12 col-md-4 left-header d-none d-lg-flex justify-content-end align-items-center">
+
+                        <!-- User Dropdown -->
+                        <div class="dropdown">
+                            <a id="desktopUserDropdown" class="header-icon" data-bs-toggle="dropdown" type="button"
+                                aria-expanded="false" aria-label="قائمة المستخدم">
+                                <i class="fa-solid fa-user btn-dark"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="desktopDropdown">
+                                <li><a class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#login"
+                                        href="#">تسجيل
+                                        الدخول / حسابي</a></li>
+                                <li><a class="dropdown-item" href="#">طلبي</a></li>
+                                <li><a class="dropdown-item" href="#">رسالتي</a></li>
+                                <li><a class="dropdown-item" href="#">كوبوناتي</a></li>
+                                <li><a class="dropdown-item" href="#">نقاطي</a></li>
+                                <li><a class="dropdown-item" href="#">شوهد مؤخراً</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item" href="#">المزيد من الخدمات</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Cart -->
+                        <a class="position-relative header-icon" data-bs-toggle="offcanvas" href="#cart-panel"
+                            aria-label="عرض سلة المشتريات">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
+                        </a>
+
+                        <!-- Favorites -->
+                        <a class="position-relative header-icon" data-bs-toggle="offcanvas" href="#favoritesOffcanvas"
+                            aria-label="المفضلة">
+                            <i class="fa-regular fa-heart"></i>
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                        </a>
+
+                        <!-- Support -->
+                        <a class="position-relative header-icon" data-bs-toggle="modal" href="#customerServiceModal"
+                            aria-label="خدمة العملاء">
+                            <i class="fa-solid fa-headset"></i>
+                        </a>
+
+                        <!-- Invoices -->
+                        <a class="position-relative header-icon" data-bs-toggle="modal" href="#invoicesModal"
+                            aria-label="الفواتير">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom header -->
+        <div class="bottom-header">
+            <!-- Navigation -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+
+                    <!-- Menu icon -->
+                    <button class="navbar-toggler menu-icon" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Header Bottom / Navbar -->
+                    <div class="d-lg-none text-end d-flex gap-2">
+
+                        <!-- Mobile Icons -->
+                        <div class="dropdown">
+                            <a id="desktopDropdown" class="navbar-toggler menu-icon" data-bs-toggle="dropdown"
+                                type="button" aria-expanded="false">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="desktopDropdown">
+                                <li><a class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#login"
+                                        href="#">تسجيل
+                                        الدخول / حسابي</a></li>
+                                <li><a class="dropdown-item" href="#">طلبي</a></li>
+                                <li><a class="dropdown-item" href="#">رسالتي</a></li>
+                                <li><a class="dropdown-item" href="#">كوبوناتي</a></li>
+                                <li><a class="dropdown-item" href="#">نقاطي</a></li>
+                                <li><a class="dropdown-item" href="#">شوهد مؤخراً</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">المزيد من الخدمات</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- cart -->
+                        <a class="navbar-toggler menu-icon" data-bs-toggle="offcanvas" href="#cart-panel">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+
+                        <!-- المفضلة -->
+                        <a class="navbar-toggler menu-icon" data-bs-toggle="offcanvas" href="#favoritesOffcanvas">
+                            <i class="fa-regular fa-heart" style="color: #d80e0e;"></i>
+                        </a>
+
+                        <!-- خدمة العملاء -->
+                        <a class="navbar-toggler menu-icon" data-bs-toggle="modal" href="#customerServiceModal">
+                            <i class="fa-solid fa-headset"></i>
+                        </a>
+                        <!-- الفواتير -->
+                        <a class="navbar-toggler menu-icon" data-bs-toggle="modal" href="#invoicesModal"
+                            aria-label="الفواتير">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                        </a>
+                    </div>
+
+                    <!-- قائمة الفئات -->
+                    <div class="container collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">جديد
+                                    في</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Sales.html">تخفيض الأسعار</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Women's_clothing.html">ملابس نسائية</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Pajamas.html">ملابس نوم</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Shoes.html">أحذية</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Health_Beauty.html">الصحة والجمال</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Children_Childhood.html">الأطفال والأمومة</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="Jewelry_Accessories.html">مجوهرات
+                                    وإكسسوارات</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Bags_Luggage.html">الحقائب والأمتعة</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Sports_an_Outdoor_Activities.html">الرياضة
+                                    والأنشطة الخارجية</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="Electronics.html">إلكترونيات</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- سلة المشتريات -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cart-panel" aria-labelledby="offcanvasCartLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasCartLabel"
+                style="font-size: 30px !important;">سلة المشتريات</h5> <button type="button"
+                class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="empty-cart"> <img src="https://cdn-icons-png.flaticon.com/512/11329/11329060.png"
+                    alt="عربة التسوق فارغة">
+                <h5>عربة التسوق فارغة</h5>
+                <p>مرحباً بعودتك! إذا كانت لديك منتجات في عربة التسوق، فقد قمنا بحفظها لك. سجّل الدخول
+                    الآن لرؤيتها، أو متى ما كنت مستعداً لإتمام الشراء.</p>
+                <a href="#" class="btn btn-login" data-bs-toggle="offcanvas" data-bs-target="#login">
+                    تسجيل الدخول
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة خدمة العملاء -->
+    <div class="modal fade" id="customerServiceModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="customerServiceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+                    aria-label="إغلاق"></button>
+
+                <div class="modal-header border-0 pt-4">
+                    <h5 class="modal-title w-100 text-center"
+                        style="font-size: 30px !important">
+                        <i class="fa-solid fa-headset text-success"></i>
+                        الخدمة للزبائن
+                    </h5>
+                </div>
+                <div class="modal-body text-center">
+                    <p>إن الله مع الصابرين. يرجى ملاحظة أن التسليم سيتأخر لمدة أسبوع.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Banner -->
+    <!-- ========== BREADCRUMB ========== -->
+    <nav aria-label="breadcrumb" class="custom-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">الصفحة الرئيسية</a></li>
+            <li class="breadcrumb-item active" aria-current="page">سلة المشتريات</li>
+        </ol>
+    </nav>
+    <section class="banner">
+        <div class="overlay"></div>
+        <section class="cart-header shadow-sm">
+            <h1 class="category-title">سلة المشتريات</h1>
+            <p class="fw-bold mt-2" style="font-size: 25px;">راجعي منتجاتك قبل إتمام عملية الشراء</p>
+        </section>
+    </section>
+    <!-- End Banner -->
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <section class="cart-section">
+                    <div
+                        class="d-none d-md-flex justify-content-between align-items-center pb-2 mb-3 border-bottom text-dark fw-bold">
+                        <div style="width: 100px; margin-left: 15px;"></div> <!-- Placeholder for image -->
+                        <div class="flex-grow-1">المنتج</div>
+                        <div class="text-center" style="width: 120px; margin-right: 20px;">الكمية</div>
+                        <div class="text-start" style="width: 50px;">السعر الإجمالي</div>
+                        <div style="width: 30px;"></div> <!-- Placeholder for remove button -->
+                    </div>
+
+                    <div class="cart-item position-relative">
+                        <button class="remove-item">
+                            <i class="fa-solid fa-times"></i>
+                        </button>
+                        <img src="images/products/product_1.jpg" alt="بيجاما كاجوال" class="img-fluid h-100">
+                        <div class="item-details">
+                            <h5>بيجاما كاجوال</h5>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="btn btn-sm decrease-quantity">-</button>
+                            <input type="text" value="1" class="form-control form-control-sm quantity-input" readonly>
+                            <button class="btn btn-sm increase-quantity">+</button>
+                        </div>
+                        <span class="item-price text-dark m-3">34.00 ر.س</span>
+                    </div>
+
+                    <div class="cart-item position-relative">
+                        <button class="remove-item">
+                            <i class="fa-solid fa-times"></i>
+                        </button>
+                        <img src="images/products/product_46.png" alt="فستان سهرة أنيق" class="img-fluid h-100">
+                        <div class="item-details">
+                            <h5>فستان سهرة أنيق</h5>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="btn btn-sm decrease-quantity">-</button>
+                            <input type="text" value="1" class="form-control form-control-sm quantity-input" readonly>
+                            <button class="btn btn-sm increase-quantity">+</button>
+                        </div>
+                        <span class="item-price text-dark m-3">205.58 ر.س</span>
+                    </div>
+
+                    <div class="cart-item position-relative">
+                        <button class="remove-item">
+                            <i class="fa-solid fa-times"></i>
+                        </button>
+                        <img src="images/products/product_47.png" alt="فستان زفاف" class="img-fluid h-100">
+                        <div class="item-details">
+                            <h5>فستان زفاف</h5>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="btn btn-sm decrease-quantity">-</button>
+                            <input type="text" value="1" class="form-control form-control-sm quantity-input" readonly>
+                            <button class="btn btn-sm increase-quantity">+</button>
+                        </div>
+                        <span class="item-price text-dark m-3">871.00 ر.س</span>
+                    </div>
+
+                    <div class="cart-item position-relative">
+                        <button class="remove-item">
+                            <i class="fa-solid fa-times"></i>
+                        </button>
+                        <img src="images/products/product_57.png" alt="خمار أرنب أنيق" class="img-fluid h-100">
+                        <div class="item-details">
+                            <h5>خمار أرنب أنيق</h5>
+                        </div>
+                        <div class="quantity-control">
+                            <button class="btn btn-sm decrease-quantity">-</button>
+                            <input type="text" value="1" class="form-control form-control-sm quantity-input" readonly>
+                            <button class="btn btn-sm increase-quantity">+</button>
+                        </div>
+                        <span class="item-price text-dark m-3">24.00 ر.س</span>
+                    </div>
+                </section>
+
+                <div class="empty-cart-message d-none">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                    <h3>سلة مشترياتك فارغة!</h3>
+                    <p>يبدو أنك لم تقومي بإضافة أي منتجات بعد. ابدئي التسوق الآن واكتشفي أحدث مجموعاتنا.</p>
+                    <a href="category.html" class="btn border-0 btn-continue-shopping">متابعة التسوق</a>
+                </div>
+
+                <!-- Coupon Section -->
+                <section class="coupon-section">
+                    <h4>هل لديك كوبون خصم؟</h4>
+                    <div class="coupon-input-group">
+                        <input type="text" class="form-control" id="couponCode" placeholder="أدخلي رمز الكوبون هنا">
+                        <button class="btn btn-copon border-0" id="applyCouponBtn">تطبيق الكوبون</button>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-lg-4 mt-md-0 mt-4">
+                <section class="cart-summary">
+                    <h4>ملخص الطلب</h4>
+                    <div class="summary-item">
+                        <span>الشحن المقدر:</span>
+                        <span id="summaryShipping">15.00 ر.س</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>الخصومات:</span>
+                        <span id="summaryDiscount">-0.00 ر.س</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>الإجمالي:</span>
+                        <span id="summaryTotal">1131.68 ر.س</span>
+                    </div>
+                    <button class="btn btn-checkout" onclick="window.location.href='checkout.html'">
+                        <i class="fa-solid fa-credit-card me-2"></i> متابعة الدفع
+                    </button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Social media -->
+            <section class="icons mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#" role="button"><i
+                        class="icon fab fa-facebook-f"></i></a>
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#" role="button"><i
+                        class="icon fab fa-instagram"></i></a>
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#" role="button"><i
+                        class="icon fab fa-twitter"></i></a>
+                <!-- Youtube -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#" role="button"><i
+                        class="icon fab fa-youtube"></i></a>
+                <!-- Pinterest -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#" role="button"><i
+                        class="icon fa-brands fa-pinterest-p"></i></a>
+                <!-- Snapchat -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#" role="button"><i
+                        class="icon fa-brands fa-snapchat"></i></a>
+                <!-- Tiktok -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#" role="button"><i
+                        class="icon fa-brands fa-tiktok"></i></a>
+                <!-- Linkedin -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#" role="button"><i
+                        class="icon fab fa-linkedin-in"></i></a>
+                <!-- Apple -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#" role="button"><i
+                        class="icon fa-brands fa-apple"></i></a>
+                <!-- Android -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#" role="button"><i
+                        class="icon fa-brands fa-android"></i></a>
+            </section>
+
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-5 col-12">
+                            <p class="newsletter-text">اشتركي معنا لتصلك أخبار الموضة</p>
+                            <!-- Email input -->
+                            <!-- نموذج الاشتراك في النشرة البريدية -->
+                            <div class="newsletter-container">
+                                <input type="email" id="newsletterEmail" class="newsletter-input"
+                                    placeholder="أدخلي بريدك الإلكتروني  ✉️" required />
+                                <button type="submit" class="newsletter-button">
+                                    اشتراك
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Section: Text -->
+            <section class="section-description mb-4">
+                <p class="description" style="color: black;">
+                    إيليجانسيا هو متجر أزياء يعكس جوهر الأنوثة العصرية؛ حيث تلتقي الرقي بالراحة، ويُختار
+                    كل منتج
+                    ليُبرز
+                    ثقة المرأة وأناقتها في كل لحظة. من الفساتين الساحرة إلى البيجامات المريحة، ومن
+                    العطور الراقية
+                    إلى
+                    الإكسسوارات المعبّرة، إيليجانسيا هو اختيارك اليومي لتعيشي بأجمل ما فيكِ
+                </p>
+            </section>
+
+            <!-- Section: Links -->
+            <section class="footer-links">
+                <!--Grid row-->
+                <div class="row row-cols-2 row-cols-md-3 justify-content-center">
+                    <!-- معلومات الشركة -->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h3><i class="fas fa-gem me-3"></i>معلومات الشركة</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a class="text-body" href="#">حول إيليجانسيا</a></li>
+                            <li><a class="text-body" href="#">اتصل بنا</a></li>
+                            <li><a class="text-body" href="#">كن أحد أعضاءنا</a></li>
+                            <li><a class="text-body" href="#">المؤثرين</a></li>
+                            <li><a class="text-body" href="#">مسؤولية اجتماعية</a></li>
+                            <li><a class="text-body" href="#">وظائف</a></li>
+                            <li><a class="text-body" href="#">برنامج شركاء</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- مركز المساعدة -->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h3>مركز المساعدة</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a class="text-body" href="#">كيفية الطلب</a></li>
+                            <li><a class="text-body" href="#">سياسة الشحن</a></li>
+                            <li><a class="text-body" href="#">المنتجات المسترجعة</a></li>
+                            <li><a class="text-body" href="#">استرداد المبلغ</a></li>
+                            <li><a class="text-body" href="#">مرجع المقاس</a></li>
+                            <li><a class="text-body" href="#">الأسئلة الشائعة</a></li>
+                            <li><a class="text-body" href="#">إيليجانسيا VIP</a></li>
+                            <li><a class="text-body" href="#">كيفية تتبع طلبك</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- خدمة الزبائن -->
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h3>خدمة الزبائن</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><a class="text-body" href="#">طريقة الدفع</a></li>
+                            <li><a class="text-body" href="#">الدفع عند الاستلام</a></li>
+                            <li><a class="text-body" href="#">بطاقة هدية</a></li>
+                            <li><a class="text-body" href="#">برنامج كسب النقاط Eleganceia</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="row row-cols-1 row-cols-md-2 mt-2">
+                <div class="col Eleganceia-text mt-5">
+                    <p class="text-black text-center">&copy;2025 Eleganceia جميع الحقوق محفوظة</p>
+                    <a class="text-black link" href="#">شروط الاستخدام |</a>
+                    <a class="text-black link" href="#">سياسة الخصوصية وملفات تعريف الارتباط |</a>
+                    <a class="text-black link" href="#">الشروط والأحكام |</a>
+                    <a class="text-black link" href="#">قواعد حقوق الملكية في السوق</a>
+                </div>
+                <div class="col d-flex justify-content-end payment-image">
+                    <img class="w-75" src="images/payment.png" alt="الدفع">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- ========== MODALS ========== -->
+    <!-- Cart Modal -->
+    <div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartLabel">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+                    aria-label="إغلاق"></button>
+
+                <div class="modal-header border-0 pt-4">
+                    <h5 class="modal-title w-100 text-center" id="addToCartLabel">
+                        <i class="fa-solid fa-check-circle text-success me-2"></i>
+                        تم إضافة المنتج إلى السلة
+                    </h5>
+                </div>
+                <div class="modal-body text-center">
+                    <p>شكراً لاختيارك! يمكنك إتمام الطلب أو متابعة التسوق بكل سهولة.</p>
+                    <a href="cart.html" class="btn btn-cart me-2">عرض السلة</a>
+                    <button class="btn btn-cart" data-bs-dismiss="modal">متابعة التسوق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="login" aria-labelledby="loginLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="loginLabel">تسجيل الدخول / إنشاء
+                حساب</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+
+            <div class="text-center mb-3">
+                <small class="text-success">بياناتك مشفرة وآمنة <i class="fa-solid fa-lock"></i></small>
+            </div>
+
+            <form class="mini-login">
+                <div class="mb-3">
+                    <label for="email" class="form-label">رقم الموبايل أو البريد الإلكتروني</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">كلمة المرور</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+
+                <div class="mb-3 text-end">
+                    <a href="#" class="text-success small">هل نسيتِ كلمة المرور؟</a>
+                </div>
+
+                <button type="submit" class="btn login w-100">
+                    تسجيل الدخول
+                </button>
+            </form>
+
+            <hr>
+
+            <div class="text-center mb-3">
+                <p>ليس لديكِ حساب بعد؟</p>
+                <button type="button" class="btn w-100 text-success" data-bs-toggle="modal"
+                    data-bs-target="#registerModal">
+                    إنشاء حساب جديد
+                </button>
+
+            </div>
+
+            <div class="decor-line">-------- أو -------</div>
+
+            <div class="d-flex justify-content-center flex-wrap gap-2">
+                <button type="button" class="btn btn-facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button type="button" class="btn btn-google">
+                    <i class="fab fa-google"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header flex-column align-items-start">
+                    <h5 class="modal-title" id="registerLabel">إنشاء حساب جديد
+                    </h5>
+                    <p class="text-muted mt-1 mb-2">أدخل معلوماتك أدناه للمتابعة. إذا كان لديك حساب
+                        بالفعل، يُرجى
+                        تسجيل
+                        الدخول.</p>
+                    <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+                        aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="mini-register">
+
+                        <!-- الاسم الأول والاسم الثاني -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="form6Example1" placeholder="الاسم الأول">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="form6Example2" placeholder="الاسم الثاني">
+                            </div>
+                        </div>
+
+                        <!-- البريد الإلكتروني -->
+                        <div class="mb-3">
+                            <input type="email" class="form-control text-start" id="emailRegister"
+                                placeholder="البريد الإلكتروني">
+                        </div>
+
+                        <!-- رقم الموبايل -->
+                        <div class="mb-3">
+                            <input type="number" class="form-control text-start" id="form6Example6"
+                                placeholder="رقم الموبايل">
+                        </div>
+
+                        <!-- كلمة المرور -->
+                        <div class="mb-3">
+                            <input type="password" class="form-control" id="passwordRegister" placeholder="كلمة المرور">
+                        </div>
+
+                        <!-- زر التسجيل -->
+                        <button type="submit" class="btn btn-success w-100 p-2 m-0 mb-2">إنشاء حساب</button>
+
+                        <!-- رابط لتسجيل الدخول -->
+                        <p class="text-center">هل لديك حساب بالفعل؟ <a href="#" class="text-success fw-bold"
+                                data-bs-toggle="offcanvas" data-bs-target="#login"
+                                style="color: green !important;">تسجيل
+                                الدخول</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال الفواتير -->
+    <div class="modal fade" id="invoicesModal" tabindex="-1" aria-labelledby="invoicesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="invoicesModalLabel">
+                        <i class="fa-solid fa-money-bill-wave text-success me-2"></i>
+                        الفواتير والمدفوعات
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="mb-4">
+                        <i class="fa-solid fa-receipt" style="font-size: 4rem; color: #28a745;"></i>
+                    </div>
+                    <h6 class="fw-bold">لا توجد فواتير حالياً</h6>
+                    <p class="text-muted">
+                        ستظهر هنا جميع فواتيرك ومعاملاتك المالية بعد إجراء أول عملية شراء.
+                    </p>
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">
+                            <i class="fa-solid fa-shopping-cart me-2"></i>
+                            ابدأ التسوق الآن
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="favoritesOffcanvas"
+        aria-labelledby="favoritesOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title text-center w-100" id="favoritesOffcanvasLabel">
+                <i class="fa-regular fa-heart text-danger me-2"></i>
+                قائمة المفضلة
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+        </div>
+        <div class="offcanvas-body browser">
+            <div class="text-center py-5">
+                <i class="fa-regular fa-heart text-muted" style="font-size: 4rem; opacity: 0.3;"></i>
+                <p class="mt-3 text-muted">لم تقم بإضافة أي منتجات للمفضلة بعد</p>
+                <a href="index.html" class="btn btn-browse mt-2">تصفح المنتجات</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="favoritesOffcanvas"
+        aria-labelledby="favoritesOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title text-center w-100" id="favoritesOffcanvasLabel">
+                <i class="fa-regular fa-heart text-danger me-2"></i>
+                قائمة المفضلة
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+        </div>
+        <div class="offcanvas-body browser">
+            <div class="text-center py-5">
+                <i class="fa-regular fa-heart text-muted" style="font-size: 4rem; opacity: 0.3;"></i>
+                <p class="mt-3 text-muted">لم تقم بإضافة أي منتجات للمفضلة بعد</p>
+                <a href="index.html" class="btn btn-browse mt-2">تصفح المنتجات</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="favoriteMessage" class="notification-message">
+        تمت الإضافة إلى المفضلة..!
+    </div>
+    
+    <button onclick="toggleDarkMode()" id="themeToggle">
+        <i id="modeIcon" class="fa-solid fa-moon"></i>
+    </button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>
